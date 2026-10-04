@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:security": "node --test tests/dependency-security.test.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -42,9 +43,15 @@
     "eslint-plugin-react": "^7.33.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "postcss": "^8.4.35",
+    "postcss": "8.5.28",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.5",
+    "postcss": "$postcss",
+    "undici": "6.29.0",
+    "minimatch@9": "9.0.7"
   }
 }
